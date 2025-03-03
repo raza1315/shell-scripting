@@ -2,7 +2,7 @@
 
 #While loop
 count=1
-while [[ $count -le 5  ]]
+while [[ $count -lt 5  ]]
  do
   echo "5x$count=$((5*count))"
   count=$((count+1))
