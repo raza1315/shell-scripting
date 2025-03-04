@@ -29,8 +29,18 @@ if  ! code_clone
   echo "Repository Already Exists..."
 fi
 
-build_image
+if ! build_image 
+ then
+  echo "Error Occurred while building the image"
+  exit 1
+fi
 
 test
 
-deployment
+if ! deployment 
+ then
+  echo "Error occurred while deploying the container"
+  echo "Deployment Failed..."
+  exit 1
+fi
+
