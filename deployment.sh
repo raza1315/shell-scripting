@@ -16,10 +16,10 @@ test(){
 pwd
 }
 
-deployement(){
+deployment(){
 echo "Removing the container and starting a new container..."
-docker stop shellDeployment 
-docker rm shellDeployment
+docker stop shelltest 
+docker rm shelltest
 docker run -d -p 3000:3000 --name shelltest shelldeployment 
 echo "Deployment successful!"
 }
@@ -33,4 +33,4 @@ build_image
 
 test
 
-
+deployment
